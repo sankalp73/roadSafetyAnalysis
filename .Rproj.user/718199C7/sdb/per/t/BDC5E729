@@ -1,0 +1,17 @@
+{
+    "contents" : "Cluster1:Very High\nCluster2:Medium\nCluster3:Low\nCluster4:High\n\nInference:\nclusters:           1           2            3              4\ndriver's fault   highest     medium        low          high\ndue to road      high        medium        low          highest\ndue to weather   medium      high          low          highest\ndue to cyclist   high        highest       low          medium\nduetopedestrian  highest     medium        low          low\n\nabhi check the states and find out info about different states:\nexample: \ncluster 2 has U.P and 2 is medium where as delhi is in low cluster 3 and it is clear from the above table that U.P \nhas problem related to \"following of traffic rules\" with cyclists being the major concern.\n\ncluster 3 contains of states which have very good road conditions and people in these state \nfollow traffic rules leading to lesser accidents or states which have low population and road conditions are good but \nhave more of 2 lane and 4 lane roads.\n   \ncluster 4:Andhra Pradesh , Karnataka ,West Bengal and Madhya Pradesh are big states with big population...\n\ncluster 1:Gujarat,Maharashtra and Tamil Nadu..\n \n                  states                cluster\n1           Andhra Pradesh                4\n2        Arunachal Pradesh                3\n3                    Assam                3\n4                    Bihar                3\n5             Chhattisgarh                3\n6                      Goa                3\n7                  Gujarat                1\n8                  Haryana                3\n9         Himachal Pradesh                3\n10       Jammu and Kashmir                3\n11               Jharkhand                3\n12               Karnataka                4\n13                  Kerala                3\n14          Madhya Pradesh                4\n15             Maharashtra                1\n16                 Manipur                3\n17               Meghalaya                3\n18                 Mizoram                3\n19                Nagaland                3\n20                  Odisha                3\n21                  Punjab                3\n22               Rajasthan                3\n23                  Sikkim                3\n24              Tamil Nadu                1\n25                 Tripura                3\n26             Uttarakhand                3\n27           Uttar Pradesh                2\n28             West Bengal                4\n29 Andaman and Nicobar Is.                3\n30              Chandigarh                3\n31  Dadra and Nagar Haveli                3\n32           Daman and Diu                3\n33                Delhi **                3\n34             Lakshadweep                3\n35              Puducherry                3\n> ",
+    "created" : 1491474283147.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1879011312",
+    "id" : "BDC5E729",
+    "lastKnownWriteTime" : 1491417874,
+    "path" : "C:/Users/MAHE/Desktop/clustering.r",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

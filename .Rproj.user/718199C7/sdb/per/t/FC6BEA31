@@ -1,0 +1,18 @@
+{
+    "contents" : "#min-max normalisation here normailse is the name of the function\nnormalise<-function(x){\n  maximum<-max(x)\n  minimum<-min(x)\n  x<-(((x-minimum)/(maximum-minimum))*(1-0))+0\n  return(x)\n}\n\n#removing the attribute total as max will always be total in min-max.Hence, removing total which is the \n#36th attributein coloumn. Therefore data[1:35,2:22]\nnewdata<-data[1:35,2:22]\n\n#applying normalise for all the 22 coloumns\nfor(i in seq(2,22,1))\n{\n  newdata[1:35,i]<-normalise(newdata[1:35,i])\n}\n\ndata<-newdata\n#applying kmeans on the dataset\nresult<-kmeans(newdata[1:35,2:22],4,nstart=20)\n#displaying the result\nresult\n\n#plotting the scatter-plot for all the states\nlibrary(ggplot2)\nggplot(newdata, aes(Total.No..of.Road.Accidents.due.to.Fault.of.Driver ,Total.No..of.Road.Accidents.due.to.Weather.Condition,\n                    color = newdata$States.UTs)) + geom_point()\n#adding the cluster result to the data-frame\nd<-newdata\nd<-cbind(d,result$cluster)\n\n#creating a new csv file with the cluster values\nwrite.csv(d,\"C:\\\\Users\\\\MAHE\\\\Downloads\\\\tree_input.csv\")\nclus<-read.csv(\"C:\\\\Users\\\\MAHE\\\\Downloads\\\\tree_input1.csv\")\n\n#plotting the cluster according to clusters \nggplot(clus, aes(Total.No..of.Road.Accidents.due.to.Fault.of.Driver ,Total.No..of.Road.Accidents.due.to.Weather.Condition,\n                    color = clus$label)) + geom_point()\n",
+    "created" : 1490199275228.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1764640445",
+    "id" : "FC6BEA31",
+    "lastKnownWriteTime" : 1491415317,
+    "path" : "~/DWDM project/normalization_kmeans.R",
+    "project_path" : "normalization_kmeans.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

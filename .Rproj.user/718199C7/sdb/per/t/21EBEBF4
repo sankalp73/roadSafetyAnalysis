@@ -1,0 +1,18 @@
+{
+    "contents" : "install.packages(\"randomForest\")\nlibrary(randomForest)\noutput.forest <- randomForest(label ~., \n                             data = adm_data\n                             )\nMDSplot(output.forest, adm_data$label)\n# View the forest results.\n\nprint(output.forest) \n\nt<-getTree(output.forest, 2, labelVar=TRUE)\nt\n",
+    "created" : 1491405963776.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2143607853",
+    "id" : "21EBEBF4",
+    "lastKnownWriteTime" : 1491466665,
+    "path" : "~/DWDM project/random_forest.R",
+    "project_path" : "random_forest.R",
+    "properties" : {
+        "tempName" : "Untitled4"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "J48 pruned tree\n------------------\n\nadm_data$Total.No..of.Road.Accidents.due.to.Fault.of.Pedestrian <= 0.126511: L (27.0)\nadm_data$Total.No..of.Road.Accidents.due.to.Fault.of.Pedestrian > 0.126511\n|   adm_data$Total.No..of.Road.Accidents.due.to.Fault.of.Pedestrian <= 0.330816: H (4.0)\n|   adm_data$Total.No..of.Road.Accidents.due.to.Fault.of.Pedestrian > 0.330816: VH (4.0/1.0)\n\nNumber of Leaves  : \t3\n\nSize of the tree : \t5\n\n=== Summary ===\n\nCorrectly Classified Instances          34               97.1429 %\nIncorrectly Classified Instances         1                2.8571 %\nKappa statistic                          0.9252\nMean absolute error                      0.0214\nRoot mean squared error                  0.1035\nRelative absolute error                 10.1739 %\nRoot relative squared error             33.2553 %\nTotal Number of Instances               35     \n\n=== Confusion Matrix ===\n\n  a  b  c  d   <-- classified as\n  4  0  0  0 |  a = H\n  0 27  0  0 |  b = L\n  0  0  0  1 |  c = M\n  0  0  0  3 |  d = VH\n\n=== 10 Fold Cross Validation ===\n\n=== Summary ===\n\nCorrectly Classified Instances          32               91.4286 %\nIncorrectly Classified Instances         3                8.5714 %\nKappa statistic                          0.7866\nMean absolute error                      0.0524\nRoot mean squared error                  0.207 \nRelative absolute error                 24.2864 %\nRoot relative squared error             65.0203 %\nTotal Number of Instances               35     \n\n=== Detailed Accuracy By Class ===\n\n                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class\n                 0.750    0.032    0.750      0.750    0.750      0.718    0.859     0.591     H\n                 0.963    0.000    1.000      0.963    0.981      0.925    0.981     0.992     L\n                 0.000    0.000    0.000      0.000    0.000      0.000    0.456     0.029     M\n                 1.000    0.063    0.600      1.000    0.750      0.750    0.964     0.567     VH\nWeighted Avg.    0.914    0.009    0.909      0.914    0.907      0.860    0.951     0.882     \n\n=== Confusion Matrix ===\n\n  a  b  c  d   <-- classified as\n  3  0  0  1 |  a = H\n  1 26  0  0 |  b = L\n  0  0  0  1 |  c = M\n  0  0  0  3 |  d = VH",
+    "created" : 1491474394845.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "758714084",
+    "id" : "77057D19",
+    "lastKnownWriteTime" : 1491415718,
+    "path" : "C:/Users/MAHE/Desktop/decisiontree.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

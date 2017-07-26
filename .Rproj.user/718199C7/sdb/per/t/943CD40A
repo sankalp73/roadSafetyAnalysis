@@ -1,0 +1,18 @@
+{
+    "contents" : "wssplot <- function(data, nc=15, seed=1234){\n  wss <- (nrow(data)-1)*sum(apply(data,2,var))\n  for (i in 2:nc){\n    set.seed(seed)\n    wss[i] <- sum(kmeans(data, centers=i)$withinss)}\n  plot(1:nc, wss, type=\"b\", xlab=\"Number of Clusters\",\n       ylab=\"Within groups sum of squares\")}\n",
+    "created" : 1490201987875.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "856586600",
+    "id" : "943CD40A",
+    "lastKnownWriteTime" : 1491415321,
+    "path" : "~/DWDM project/wss.r",
+    "project_path" : "wss.r",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

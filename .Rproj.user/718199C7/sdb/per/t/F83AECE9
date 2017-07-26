@@ -1,0 +1,18 @@
+{
+    "contents" : "library(rpart)\nlibrary(RWeka)\nlibrary(party)\n#read the final dataset\n\ndata_2<-read.csv(\"C:\\\\Users\\\\MAHE\\\\Downloads\\\\tree_input1.csv\")\n\n#type cast it to data frame\n\nadm_data<-as.data.frame(data_2)\n\n#the second value is the name of the states, so we take only from 3 to 24 attribute coloumns \n\nadm_data<-adm_data[3:24]\n\n#j48 model of decision tree\n\nm1 <- J48(label~adm_data$Total.No..of.Road.Accidents.due.to.Fault.of.Driver\n          +adm_data$Total.No..of.Road.Accidents.due.to.Fault.of.Pedestrian\n          +adm_data$Total.No..of.Road.Accidents.due.to.Fault.of.Cyclist\n          +adm_data$Number.of.Persons.Killed.due.to.Defect.in.Road.Condition\n          +adm_data$Total.No..of.Road.Accidents.due.to.All.Other.Causes. ,data = adm_data)\n#plotting the tree\nif(require(\"party\", quietly = TRUE)) plot(m1)\n\nsummary(m1)\n\n#this is for cross validation here number of folds is 10\neval <- evaluate_Weka_classifier(m1, numFolds = 10, complexity = FALSE, \n                                     seed = 1, class = TRUE)\neval\n\nlibrary(FSelector)\n#this is for checking gain ratio \ninformation.gain(label~., data = adm_data)\nsubset1.adm <- subset(adm_data,Total.No..of.Road.Accidents.due.to.Fault.of.Pedestrian > 0.127)\ninformation.gain(label~., data = subset1.adm)\nsubset1.adm <- subset(adm_data,Total.No..of.Road.Accidents.due.to.Fault.of.Cyclist > 0.236)\ninformation.gain(label~., data = subset1.adm)\n\n#C5.0 decision tree\nlibrary(C50)\nlibrary(caTools)\nd<-adm_data\nsplit=sample.split(d$label,SplitRatio = 0.75)\ntrain=subset(d,split==TRUE)\ntest=subset(d,split==FALSE)\ntreemodel<-C5.0(x=d[,1:21],y=d$label)\ny<-plot(treemodel)\nsummary(treemodel)\n\ntest.label=predict(treemodel,test[,1:21])\nr<-test.label\nr\nsummary(r)\n\nconfMat<-table(test$label,test.label)\n\ny<-plot(treemodel)\nplot(test.label)\n",
+    "created" : 1491401385253.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3954503006",
+    "id" : "F83AECE9",
+    "lastKnownWriteTime" : 1491471425,
+    "path" : "~/DWDM project/decisiontree.r",
+    "project_path" : "decisiontree.r",
+    "properties" : {
+        "tempName" : "Untitled3"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

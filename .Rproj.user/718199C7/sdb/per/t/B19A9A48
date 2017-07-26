@@ -1,0 +1,18 @@
+{
+    "contents" : "data_2<-read.csv(\"C:\\\\Users\\\\MAHE\\\\Downloads\\\\tree_input.csv\")\ndata<-as.data.frame(read.csv(\"C:\\\\Users\\\\MAHE\\\\Downloads\\\\roadac.csv\"))\nlabels(data)\nnewdata<-na.omit(data)\n#bar-plot of different attributes \nbarplot(m$Total.No..of.Road.Accidents.due.to.All.Other.Causes.[1:35], xlab=\"(states other)\", ylab=\"no. of\",main=\"plot\",names.arg=seq(1,35,1))\n",
+    "created" : 1491395960306.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2218496309",
+    "id" : "B19A9A48",
+    "lastKnownWriteTime" : 1491415428,
+    "path" : "~/DWDM project/2.r",
+    "project_path" : "2.r",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
